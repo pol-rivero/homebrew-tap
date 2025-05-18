@@ -1,7 +1,7 @@
 class Doot < Formula
   desc     "Fast, simple and intuitive dotfiles manager that just gets the job done"
   homepage "https://github.com/pol-rivero/doot"
-  version  "0.4.4"
+  version  "0.4.5"
   license  "MIT"
   head     "https://github.com/pol-rivero/doot.git", branch: "main"
 
@@ -10,23 +10,23 @@ class Doot < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pol-rivero/doot/releases/download/0.4.4/doot-darwin-arm64"
-      sha256 "d99cbb26d6bdb00d34e1a0f735ddf1a781936c25a51ef563383fe584a454b7bb"
+      url "https://github.com/pol-rivero/doot/releases/download/0.4.5/doot-darwin-arm64"
+      sha256 "235b981a322f6e81b86e22a3e06e5cc3d6f5b8e2a0c620f1eb06a8fc6dbdf97e"
     end
     on_intel do
-      url "https://github.com/pol-rivero/doot/releases/download/0.4.4/doot-darwin-x86_64"
-      sha256 "fb719527425fdb0aa5f8aae471148fc064e0d24c7d2b52f261b43a33a4c98c9b"
+      url "https://github.com/pol-rivero/doot/releases/download/0.4.5/doot-darwin-x86_64"
+      sha256 "023c3346c5d203e89fffbbd7cfa42cadfe1d9f6e9c94ef520aa571badf3a84cc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/pol-rivero/doot/releases/download/0.4.4/doot-linux-arm64"
-      sha256 "87c891961ef2c6633d1795f5d73ad4099463aba3a534366d18c101e726ce186e"
+      url "https://github.com/pol-rivero/doot/releases/download/0.4.5/doot-linux-arm64"
+      sha256 "3501f1bf87beb5ee6f4ce3fa0e0b23a44a22f8061c313cc336f31de13eac1aa2"
     end
     on_intel do
-      url "https://github.com/pol-rivero/doot/releases/download/0.4.4/doot-linux-x86_64"
-      sha256 "51b751c84afa163cf09024b2a6b081a4ad0cd6bfe725e2c288706597ef5abe7a"
+      url "https://github.com/pol-rivero/doot/releases/download/0.4.5/doot-linux-x86_64"
+      sha256 "7596181e8ce01e9034dde20c5463ba84e56179f77061b01f305aad336372a5de"
     end
   end
 
