@@ -18,6 +18,8 @@ jobs:
       contents: read
       pull-requests: read
     steps:
+      - uses: actions/checkout@v3
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -35,19 +37,11 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - name: Check for non-UTF-8 files
+      - name: Lint Tap (Style)
         run: |
-          brew ruby -e '
-            Dir.glob("Formula/*.rb") do |f|
-              begin
-                File.read(f, encoding: "UTF-8")
-              rescue ArgumentError => e
-                puts "#{f}: #{e.message}"
-              end
-            end
-          '
+          cd $GITHUB_WORKSPACE
+          brew style .
 
-      - run: brew test-bot --only-tap-syntax 
       - run: brew test-bot --only-formulae
 
       - name: Upload bottles as artifact
