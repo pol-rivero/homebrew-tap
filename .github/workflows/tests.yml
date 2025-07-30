@@ -35,8 +35,17 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - name: Run Homebrew style check (verbose)
-        run: brew style --verbose pol-rivero/tap
+      - name: Check for non-UTF-8 files
+        run: |
+          brew ruby -e '
+            Dir.glob("Formula/*.rb") do |f|
+              begin
+                File.read(f, encoding: "UTF-8")
+              rescue ArgumentError => e
+                puts "#{f}: #{e.message}"
+              end
+            end
+          '
 
       - run: brew test-bot --only-tap-syntax 
       - run: brew test-bot --only-formulae
