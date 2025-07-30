@@ -18,7 +18,7 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -39,7 +39,7 @@ jobs:
 
       - name: Lint Tap (Style)
         run: |
-          cd $GITHUB_WORKSPACE
+          cd "$GITHUB_WORKSPACE"
           brew style .
 
       - run: brew test-bot --only-formulae
