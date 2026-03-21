@@ -18,6 +18,11 @@ cask "github-desktop-plus" do
   depends_on macos: ">= :monterey"
 
   app "GitHub Desktop Plus.app"
+
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/GitHub Desktop Plus.app"]
+  end
   binary "#{appdir}/GitHub Desktop Plus.app/Contents/Resources/app/static/github.sh",
          target: "github-desktop-plus-cli"
 
