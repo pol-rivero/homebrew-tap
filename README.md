@@ -6,6 +6,7 @@ This repository contains a collection of [Homebrew](https://brew.sh) formulae fo
 
 | Package Name | Description | Install Command |
 |--------------|-------------|-----------------|
+| `github-desktop-plus` |  Fork of GitHub Desktop with extra features and improvements. | `brew install pol-rivero/tap/github-desktop-plus` |
 | `doot` |  A fast, simple and intuitive dotfiles <br>manager that just gets the job done. | `brew install pol-rivero/tap/doot` |
 
 ## How do I install these packages?
