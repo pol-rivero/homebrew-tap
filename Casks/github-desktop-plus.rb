@@ -1,9 +1,9 @@
 cask "github-desktop-plus" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.7.1"
-  sha256 arm:   "e7908e79958ee37c68f32af651dd0660d6e83f4beb4e2f71ff56355966f13d44",
-         intel: "00e8808a3168c8e3778368e91312573474615ee1e8eb13137305cab198699ca2"
+  version "3.5.7.2"
+  sha256 arm:   "28d35fe3e0010304d633670ae5616f2e54eef7bafd84e7a368f34bafb3452c49",
+         intel: "42f4ff129b169b8b7a16f06cb843145994964d8b9d593ff73ec46ef688ccaa81"
 
   url "https://github.com/pol-rivero/github-desktop-plus/releases/download/v#{version}/GitHubDesktopPlus-v#{version}-macOS-#{arch}.zip"
   name "GitHub Desktop Plus"
@@ -18,7 +18,7 @@ cask "github-desktop-plus" do
   depends_on macos: ">= :monterey"
 
   app "GitHub Desktop Plus.app"
-  binary "#{appdir}/GitHub Desktop Plus.app/Contents/Resources/app/static/github.sh",
+  binary "#{appdir}/GitHub Desktop Plus.app/Contents/Resources/app/static/github-desktop-plus-cli.sh",
          target: "github-desktop-plus-cli"
 
   postflight do
