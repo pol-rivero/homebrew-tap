@@ -11,22 +11,22 @@ class Doot < Formula
   on_macos do
     on_arm do
       url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-darwin-arm64"
-      sha256 "f99154a08b63ee831c63741555a8a4c7c5762ebef64041983272d7095c5196c8"
+      sha256 "629baedbef37ea91de46e1fa7c2546e62814d5f16114912ba60457c37d2e44a3"
     end
     on_intel do
       url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-darwin-x86_64"
-      sha256 "9fdc54a95c5c4ff1bec304176815bb60bc8537a2db829c2519ab8360d5499748"
+      sha256 "3c347e201292bdde55117767993db683f55b4e2a1b7bf6ac6e2be26279f7076e"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-linux-arm64"
-      sha256 "371e900991874dca9928752db57d14a941b7b358486b0b0df0e6c6ae7120507f"
+      sha256 "76b3144e7e6e90fde0f44ef82f48a77c446f0a3a9c915f08c0e464148d808c5b"
     end
     on_intel do
       url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-linux-x86_64"
-      sha256 "03534d9322d69c8fb2796c9cda6b58f6d48fdbd8939147e8e7d24557470de6c2"
+      sha256 "fb1b27f06b70c3359500674d4a2e436312936a99c589877c108d65babaef652b"
     end
   end
 
