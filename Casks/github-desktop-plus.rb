@@ -1,9 +1,9 @@
 cask "github-desktop-plus" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.9.1"
-  sha256 arm:   "de4015f1351bf599fb9731842d1ee7aaaf1bb5283aaff06ac51a647cdedb83ac",
-         intel: "46420a039aba67b532a9ab097583537aa0fc8912790e845987eb5b3754985979"
+  version "3.5.9.2"
+  sha256 arm:   "3629d7823dbd2eb76f717bfdb5a431697ed635556c77993b0e0167274b9abf23",
+         intel: "98406e3ec9f53834e8522f25185847b08171080740327d12f2f284f1d4bdde0d"
 
   url "https://github.com/pol-rivero/github-desktop-plus/releases/download/v#{version}/GitHubDesktopPlus-v#{version}-macOS-#{arch}.zip"
   name "GitHub Desktop Plus"
