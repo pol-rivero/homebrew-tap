@@ -18,7 +18,7 @@ jobs:
       contents: read
       pull-requests: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Install Bubblewrap on Linux
         if: runner.os == 'Linux'
@@ -35,7 +35,7 @@ jobs:
           token: ${{ github.token }}
 
       - name: Cache Homebrew Bundler RubyGems
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
