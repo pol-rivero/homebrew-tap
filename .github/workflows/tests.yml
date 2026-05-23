@@ -20,6 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Bubblewrap on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get install -y bubblewrap
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
