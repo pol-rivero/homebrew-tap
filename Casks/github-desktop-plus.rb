@@ -1,14 +1,14 @@
 cask "github-desktop-plus" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.5.13.3"
-  sha256 arm:   "85aeac8a8c0b53597cf8fee91157ebb027e06c48b66db81b1b47c5e624717b51",
-         intel: "f0144a947d88bbb122a437ee1e3844db43aceb6ea4a2ad4cc120e73252ca3185"
+  version "3.6.1.0"
+  sha256 arm:   "c35b104b3f5e8857cdd96a95853a973daba9ed8471d371bdb2c7360e57ecbdb2",
+         intel: "b962596f80c445180abcc620d497cd68a058e833f0ed7d3ccfc32e340cb65dae"
 
-  url "https://github.com/pol-rivero/github-desktop-plus/releases/download/v#{version}/GitHubDesktopPlus-v#{version}-macOS-#{arch}.zip"
-  name "GitHub Desktop Plus"
-  desc "Fork of GitHub Desktop with extra features and improvements"
-  homepage "https://github.com/pol-rivero/github-desktop-plus"
+  url "https://github.com/desktop-plus/desktop-plus/releases/download/v#{version}/DesktopPlus-v#{version}-macOS-#{arch}.zip"
+  name "Desktop Plus"
+  desc "GitHub Desktop fork with extra features and improvements"
+  homepage "https://desktop-plus.org"
 
   livecheck do
     url :url
@@ -17,17 +17,17 @@ cask "github-desktop-plus" do
 
   depends_on macos: :monterey
 
-  app "GitHub Desktop Plus.app"
-  binary "#{appdir}/GitHub Desktop Plus.app/Contents/Resources/app/static/github-desktop-plus-cli.sh",
-         target: "github-desktop-plus-cli"
+  app "Desktop Plus.app"
+  binary "#{appdir}/Desktop Plus.app/Contents/Resources/app/static/desktop-plus-cli.sh",
+         target: "desktop-plus-cli"
 
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/GitHub Desktop Plus.app"]
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Desktop Plus.app"]
   end
 
   zap trash: [
-    "~/Library/Application Support/GitHub Desktop Plus",
-    "~/Library/Logs/GitHub Desktop Plus",
+    "~/Library/Application Support/Desktop Plus",
+    "~/Library/Logs/Desktop Plus",
   ]
 end
