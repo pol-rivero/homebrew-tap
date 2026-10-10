@@ -1,7 +1,7 @@
 class Doot < Formula
   desc     "Fast, simple and intuitive dotfiles manager that just gets the job done"
   homepage "https://github.com/pol-rivero/doot"
-  version  "0.6.8"
+  version  "0.7.0"
   license  "MIT"
   head     "https://github.com/pol-rivero/doot.git", branch: "main"
 
@@ -10,23 +10,23 @@ class Doot < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-darwin-arm64"
-      sha256 "629baedbef37ea91de46e1fa7c2546e62814d5f16114912ba60457c37d2e44a3"
+      url "https://github.com/pol-rivero/doot/releases/download/0.7.0/doot-darwin-arm64"
+      sha256 "336ed740eec5b636e9c9575275b769cd35aa000f27624534a883dd365692eb55"
     end
     on_intel do
-      url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-darwin-x86_64"
-      sha256 "3c347e201292bdde55117767993db683f55b4e2a1b7bf6ac6e2be26279f7076e"
+      url "https://github.com/pol-rivero/doot/releases/download/0.7.0/doot-darwin-x86_64"
+      sha256 "3518c94276d222f1027b3b87e1d7b01ec400c48ca977a4bbde7c42edf112e5e6"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-linux-arm64"
-      sha256 "76b3144e7e6e90fde0f44ef82f48a77c446f0a3a9c915f08c0e464148d808c5b"
+      url "https://github.com/pol-rivero/doot/releases/download/0.7.0/doot-linux-arm64"
+      sha256 "c1e755b3ad2ad45583eba0cf50f728e71952423c366a32cb88fd51aec8e6033a"
     end
     on_intel do
-      url "https://github.com/pol-rivero/doot/releases/download/0.6.8/doot-linux-x86_64"
-      sha256 "fb1b27f06b70c3359500674d4a2e436312936a99c589877c108d65babaef652b"
+      url "https://github.com/pol-rivero/doot/releases/download/0.7.0/doot-linux-x86_64"
+      sha256 "ad25b1d56f992f561179df70e28e892cfc3370d88b189ab2ddd9ae165c15de49"
     end
   end
 
@@ -39,6 +39,6 @@ class Doot < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/doot --version")
+    assert_match version.to_s, shell_output("#{bin}/doot version")
   end
 end
